@@ -12,8 +12,6 @@ class StockListing(object):
     def index(self):
         top_stocks = get_top_ten_stocks()
         template = env.get_template("index.html")
-        #index = open("index.html").read().format(top_stocks=top_stocks) 
-        #index = open("index.html").read().format(first_header='goodbye'
         return template.render(top_stocks = top_stocks)
     
     @cherrypy.expose
